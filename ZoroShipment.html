@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoro Shipment Printout</title>
+    <style>
+        img {
+            width: 150px;
+            height: auto;
+        }
+
+        #ZoroImage {
+            float: left;
+        }
+
+        #PWIImage {
+            float: right;
+        }
+
+        #Title {
+            font-weight: bold;
+            font-size: xx-large;
+            float: inside;
+            text-align: center;
+        }
+
+        section > div {
+            line-height: 1.5;
+        }
+
+        .itemTitle {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .item {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+<div id="Title"><img src="https://www.zoro.com/static/assets/img/base/header/zoro-logo-e292c3a472.svg" alt="Zoro logo"
+                     ID="ZoroImage">Zoro Shipment Ready<img
+        src="https://pwiworks.com/wp-content/uploads/2020/06/pwi-logo.jpg" alt="PWI logo" id="PWIImage"></div>
+<hr>
+<section>
+<div><span class="itemTitle">Next Step:</span><span class="item">Create the shipping label and packing list and give it to %packedBy% with %requestID% written on it.</span>
+</div>
+<br>
+<div><span class="itemTitle">Shipping Request:</span><span class="item">%requestID%</span></div>
+<div><span class="itemTitle">Zoro Order ID:</span><span class="item">%orderID%</span></div>
+<br>
+<div><span class="itemTitle">Items in Box:</span><span class="item">%itemQTY%</span></div>
+<div><span class="itemTitle">Packed By:</span><span class="item">%packedBy%</span></div>
+<div><span class="itemTitle">Scheduled Ship Date:</span><span class="item">%shipDate%</span></div>
+<div><span class="itemTitle">Box Weight:</span><span class="item">%weight%</span></div>
+<br>
+<div><span class="itemTitle">Invoice Number:</span><span class="item">%invoice%</span></div>
+<div><span class="itemTitle">Invoice Date:</span><span class="item">_________________</span></div>
+<br>
+<div><span class="itemTitle">Notes:</span></div>
+</section>
+</body>
+</html>
