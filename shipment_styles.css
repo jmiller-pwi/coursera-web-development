@@ -7,7 +7,7 @@ body {
 }
 
 #Title {
-    font-family: Georgia;
+    font-family: Georgia, sans-serif;
     font-variant: small-caps;
     font-weight: bold;
     font-size: xx-large;
