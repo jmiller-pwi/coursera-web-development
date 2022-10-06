@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoro Shipment Printout</title>
+    <link rel="stylesheet" href="shipment_styles.css">
+    <style>
+        #zoro-logo {
+            width: 130px;
+            float: left;
+        }
+
+        #pwi-logo-without-oval {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div id="title"><img src="https://www.zoro.com/static/assets/img/base/header/zoro-logo-e292c3a472.svg" alt="Zoro logo"
+                     ID="zoro-logo"><span>Zoro Shipment Ready</span><img
+        src="https://pwiworks.com/wp-content/uploads/pwi-logo-without-oval-640x344.png" alt="PWI logo" id="pwi-logo-without-oval"></div>
+<br>
+<section>
+<div><span class="item-title">Next Step:</span><span class="item">Create the shipping label and packing list and give it to %packedBy% with %requestID% written on it.</span>
+</div>
+<br>
+<div><span class="item-title">Shipping Request:</span><span class="item">%requestID%</span></div>
+<div><span class="item-title">Zoro Order ID:</span><span class="item">%orderID%</span></div>
+<br>
+<div><span class="item-title">Items in Box:</span><span class="item">%itemQTY%</span></div>
+<div><span class="item-title">Packed By:</span><span class="item">%packedBy%</span></div>
+<div><span class="item-title">Scheduled Ship Date:</span><span class="item">%shipDate%</span></div>
+<div><span class="item-title">Box Weight:</span><span class="item">%weight%</span></div>
+<br>
+<div><span class="item-title">Invoice Number:</span><span class="item">%invoice%</span></div>
+<div><span class="item-title">Invoice Date:</span><span class="item">_________________</span></div>
+<br>
+<div><span class="item-title">Notes:</span></div>
+</section>
+</body>
+</html>

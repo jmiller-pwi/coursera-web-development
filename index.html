@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>PWI Jeff's very own Github page!</title>
-        <style>
-            h1 {
-                color: blue;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Hi There!</h1>
-        <hr>
-        <p>I'm learning HTML and CSS so that I can generate documents using <a href="https://restpack.io/" target="_blank">restpack</a>.</p>
+<head>
+    <meta charset="utf-8">
+    <title>PWI Jeff's very own Github page!</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header"><h1>Hi There!</h1>
+        <hr class="divider">
+    </div>
+    <main class="content">
+        <p>My name is Jeff. I'm learning HTML and CSS so that I can generate documents using <a
+                href="https://restpack.io/"
+                target="_blank">Restpack</a>.
+        </p>
         <p>Here is a list of documents I am working on:</p>
-        <ul>
-            <li><a href="ZoroShipment.html">Zoro Shipment Ticket</a></li>
-        </ul>
-    </body>
+        <div class="item"><a href="shipments/zoro_shipment.html">Zoro Shipment Ticket</a></div>
+        <div class="item"><a href="shipments/pwi_shipment.html">Shipment Ticket</a></div>
+    </main>
+</div>
+</body>
 </html>

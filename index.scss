@@ -1,0 +1,66 @@
+$background: #fef9f8;
+$text: #0d0d0d;
+$accent: #ef9273;
+$gray: #D0D4DC;
+$link: #2D82B7;
+$visited: #5E548E;
+$invisible: #0000;
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  color: $text;
+}
+
+a {
+  color: $link;
+  transition: .2s;
+}
+
+a:visited {
+  color: $visited;
+}
+
+a:hover {
+  cursor: pointer;
+  color: $accent;
+}
+
+body {
+  background-color: $background;
+}
+
+.container {
+  border-top: 1em solid $accent;
+}
+
+.header {
+  margin: 1em 0 0 0;
+  text-align: center;
+}
+
+.divider {
+  border-top: 2px solid $gray;
+}
+
+.header h1 {
+  margin: 0.3em;
+}
+
+.content {
+  font-size: 120%;
+  padding: 1em;
+  margin: 1em auto;
+  max-width: 40em;
+  text-align: center;
+  width: border-box;
+}
+
+.item {
+  margin-bottom: .5em;
+}
+
+p {
+  padding-bottom: 1em;
+}
