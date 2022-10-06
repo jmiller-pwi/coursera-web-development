@@ -5,6 +5,7 @@ $gray: #D0D4DC;
 $link: #2D82B7;
 $visited: #5E548E;
 $invisible: #0000;
+$default-spacing: 1em;
 
 * {
   padding: 0;
@@ -32,11 +33,11 @@ body {
 }
 
 .container {
-  border-top: 1em solid $accent;
+  border-top: $default-spacing solid $accent;
 }
 
 .header {
-  margin: 1em 0 0 0;
+  margin: $default-spacing 0 0 0;
   text-align: center;
 }
 
@@ -50,8 +51,8 @@ body {
 
 .content {
   font-size: 120%;
-  padding: 1em;
-  margin: 1em auto;
+  padding: $default-spacing;
+  margin: $default-spacing auto;
   max-width: 40em;
   text-align: center;
   width: border-box;
@@ -62,5 +63,5 @@ body {
 }
 
 p {
-  padding-bottom: 1em;
+  padding-bottom: $default-spacing;
 }
