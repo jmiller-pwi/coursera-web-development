@@ -44,8 +44,9 @@ body {
   font-size: 120%;
   padding: 1em;
   margin: 1em auto;
-  max-width: 40em;
+  max-width: 50em;
   text-align: center;
+  width: border-box;
 }
 
 .item {
