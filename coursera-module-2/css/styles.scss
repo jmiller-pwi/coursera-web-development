@@ -43,15 +43,16 @@ h1 {
   background-color: $color-item;
   height: 10em;
   margin: 1em;
+  border-radius: 5px;
 
   &--title {
-    margin: 5px 10px 5px 5px;
+    margin: 5px 10px;
     clear: both;
     font-weight: bold;
   }
 
   &--description {
-    margin: 5px;
+    margin: 5px 10px;
   }
 }
 
@@ -64,8 +65,10 @@ h1 {
   text-align: center;
   float: right;
   position: relative;
+  font-weight: bold;
   top: -$border-width;
   right: -$border-width;
+  margin-bottom: 1em;
 }
 
 .key {

@@ -20,14 +20,15 @@ h1 {
   background-color: #D5D5D5;
   height: 10em;
   margin: 1em;
+  border-radius: 5px;
 }
 .item--title {
-  margin: 5px 10px 5px 5px;
+  margin: 5px 10px;
   clear: both;
   font-weight: bold;
 }
 .item--description {
-  margin: 5px;
+  margin: 5px 10px;
 }
 
 .key--three, .key--two, .key--one {
@@ -38,8 +39,10 @@ h1 {
   text-align: center;
   float: right;
   position: relative;
+  font-weight: bold;
   top: -2px;
   right: -2px;
+  margin-bottom: 1em;
 }
 
 .key--one {
