@@ -1,0 +1,120 @@
+$desktop-name: "lg";
+$desktop-min-width: 992px;
+$tablet-name: "md";
+$tablet-min-width: 768px;
+$tablet-max-width: $desktop-min-width - 1px;
+$num-columns: 12;
+
+
+
+$color-background: #d5d5d5;
+$color-item: #D5D5D5;
+$color-accent-1: #B14206;
+$color-accent-2: #614A6D;
+$color-accent-3: #388057;
+$color-white: #ffffff;
+$color-black: #141414;
+
+$border-width: 2px;
+$standard-border: $border-width solid $color-black;
+
+
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  color: $color-black;
+  margin:0;
+}
+
+.content-header {
+  text-align: center;
+}
+
+h1 {
+  margin: 1em;
+  font-family: Garamond serif;
+}
+
+
+
+.item {
+  border: $standard-border;
+  background-color: $color-item;
+  height: 10em;
+  margin: 1em;
+
+  &--title {
+    margin: 5px 10px 5px 5px;
+    clear: both;
+    font-weight: bold;
+  }
+
+  &--description {
+    margin: 5px;
+  }
+}
+
+
+%key-style {
+  border: $standard-border;
+  color: $color-white;
+  padding: 0.1em;
+  width: 130px;
+  text-align: center;
+  float: right;
+  position: relative;
+  top: -$border-width;
+  right: -$border-width;
+}
+
+.key {
+  &--one {
+    @extend %key-style;
+    background-color: $color-accent-1;
+  }
+
+  &--two {
+    @extend %key-style;
+    background-color: $color-accent-2;
+  }
+
+  &--three {
+    @extend %key-style;
+    background-color: $color-accent-3;
+  }
+}
+
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+}
+
+// default settings for floated elements
+@mixin default() {
+  float: left;
+}
+
+/********** desktop **********/
+@media (min-width: $desktop-min-width) {
+
+  @for $i from 1 through $num-columns {
+    $width: round($i / $num-columns * 10000) / 10000 * 100%;
+    .col-#{$desktop-name}-#{$i} {
+      @include default();
+      width: $width;
+    }
+  }
+}
+
+/********** tablet **********/
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+
+  @for $i from 1 through $num-columns {
+    $width: round($i / $num-columns * 10000) / 10000 * 100%;
+    .col-#{$tablet-name}-#{$i} {
+      @include default();
+      width: $width;
+    }
+  }
+}

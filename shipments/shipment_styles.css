@@ -23,6 +23,7 @@ body {
 
 section > div {
     line-height: 1.8;
+    clear: both;
 }
 
 .item-title {

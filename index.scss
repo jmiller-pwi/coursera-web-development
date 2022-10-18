@@ -17,15 +17,15 @@ $default-spacing: 1em;
 a {
   color: $link;
   transition: .2s;
-}
 
-a:visited {
-  color: $visited;
-}
+  &:visited{
+    color: $visited;
+  }
 
-a:hover {
-  cursor: pointer;
-  color: $accent;
+  &:hover {
+    cursor: pointer;
+    color: $accent;
+  }
 }
 
 body {
@@ -39,15 +39,16 @@ body {
 .header {
   margin: $default-spacing 0 0 0;
   text-align: center;
+
+  h1 {
+    margin: 0.3em;
+  }
 }
 
 .divider {
   border-top: 2px solid $gray;
 }
 
-.header h1 {
-  margin: 0.3em;
-}
 
 .content {
   font-size: 120%;
