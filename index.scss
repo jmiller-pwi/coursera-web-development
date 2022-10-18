@@ -64,5 +64,6 @@ body {
 }
 
 p {
-  padding-bottom: $default-spacing;
+  margin-top: $default-spacing;
+  margin-bottom: $default-spacing / 2;
 }
