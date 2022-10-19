@@ -1,0 +1,55 @@
+$page-margins: 0.3in;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@page {
+  size: Letter landscape;
+  margin-top: $page-margins;
+  margin-bottom: $page-margins;
+}
+
+.container {
+  width: 50%;
+}
+
+.left-half {
+  float: left;
+  padding-right: $page-margins;
+}
+
+.right-half {
+  float: right;
+  padding-left: $page-margins;
+}
+
+.section {
+  text-align: center;
+  break-inside: avoid-column;
+  margin-bottom: 0.25in;
+}
+
+.leader-list li {
+  display: flex;
+
+  .title {
+    order: 1;
+  }
+
+  .name {
+    order: 3;
+  }
+
+  &::after {
+    background-image: radial-gradient(circle, currentcolor 1px, transparent 1.5px);
+    background-position: bottom;
+    background-size: 1ex 4.5px;
+    background-repeat: space no-repeat;
+    content: "";
+    flex-grow: 1;
+    height: 1em;
+    order: 2;
+  }
+}

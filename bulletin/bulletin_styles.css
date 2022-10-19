@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@page {
+  size: Letter landscape;
+  margin-top: 0.3in;
+  margin-bottom: 0.3in;
+}
+.container {
+  width: 50%;
+}
+
+.left-half {
+  float: left;
+  padding-right: 0.3in;
+}
+
+.right-half {
+  float: right;
+  padding-left: 0.3in;
+}
+
+.section {
+  text-align: center;
+  break-inside: avoid-column;
+  margin-bottom: 0.25in;
+}
+
+.leader-list li {
+  display: flex;
+}
+.leader-list li .title {
+  order: 1;
+}
+.leader-list li .name {
+  order: 3;
+}
+.leader-list li::after {
+  background-image: radial-gradient(circle, currentcolor 1px, transparent 1.5px);
+  background-position: bottom;
+  background-size: 1ex 4.5px;
+  background-repeat: space no-repeat;
+  content: "";
+  flex-grow: 1;
+  height: 1em;
+  order: 2;
+}
+
+/*# sourceMappingURL=bulletin_styles.css.map */
