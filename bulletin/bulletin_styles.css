@@ -1,13 +1,39 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding-inline-start: 0;
+  font-size: 12pt;
 }
 
 @page {
   size: Letter landscape;
-  margin-top: 0.3in;
-  margin-bottom: 0.3in;
+  margin: 0;
 }
+.page {
+  padding: 0.3in;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 0.3em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
 .container {
   width: 50%;
 }
@@ -23,13 +49,29 @@
 }
 
 .section {
-  text-align: center;
   break-inside: avoid-column;
   margin-bottom: 0.25in;
 }
 
+.centered {
+  text-align: center;
+}
+
+.announcement {
+  text-align: left;
+}
+.announcement span {
+  display: block;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+.announcement p {
+  margin-left: 0.5em;
+}
+
 .leader-list li {
   display: flex;
+  width: 100%;
 }
 .leader-list li .title {
   order: 1;

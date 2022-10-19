@@ -3,12 +3,35 @@ $page-margins: 0.3in;
 * {
   box-sizing: border-box;
   margin: 0;
+  padding-inline-start: 0;
+  font-size: 12pt;
 }
 
 @page {
   size: Letter landscape;
-  margin-top: $page-margins;
-  margin-bottom: $page-margins;
+  margin: 0;
+}
+
+.page {
+  padding: $page-margins;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 0.3em;
+}
+
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4 {
+  font-size: 1em;
+  font-weight: normal;
 }
 
 .container {
@@ -26,13 +49,31 @@ $page-margins: 0.3in;
 }
 
 .section {
-  text-align: center;
   break-inside: avoid-column;
   margin-bottom: 0.25in;
 }
 
+.centered {
+  text-align: center;
+}
+
+.announcement {
+  text-align: left;
+
+  span {
+    display: block;
+    font-weight: bold;
+    margin-top: 0.5em;
+  }
+
+  p {
+    margin-left: 0.5em;
+  }
+}
+
 .leader-list li {
   display: flex;
+  width: 100%;
 
   .title {
     order: 1;
