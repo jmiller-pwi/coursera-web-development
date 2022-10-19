@@ -2,7 +2,6 @@ $desktop-name: "lg";
 $desktop-min-width: 992px;
 $tablet-name: "md";
 $tablet-min-width: 768px;
-$tablet-max-width: $desktop-min-width - 1px;
 $num-columns: 12;
 
 
@@ -98,6 +97,18 @@ h1 {
   float: left;
 }
 
+/********** tablet **********/
+@media (min-width: $tablet-min-width) {
+
+  @for $i from 1 through $num-columns {
+    $width: round($i / $num-columns * 10000) / 10000 * 100%;
+    .col-#{$tablet-name}-#{$i} {
+      @include default();
+      width: $width;
+    }
+  }
+}
+
 /********** desktop **********/
 @media (min-width: $desktop-min-width) {
 
@@ -110,14 +121,3 @@ h1 {
   }
 }
 
-/********** tablet **********/
-@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-
-  @for $i from 1 through $num-columns {
-    $width: round($i / $num-columns * 10000) / 10000 * 100%;
-    .col-#{$tablet-name}-#{$i} {
-      @include default();
-      width: $width;
-    }
-  }
-}

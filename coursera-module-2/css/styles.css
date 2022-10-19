@@ -60,6 +60,57 @@ h1 {
   width: 100%;
 }
 
+/********** tablet **********/
+@media (min-width: 768px) {
+  .col-md-1 {
+    float: left;
+    width: 8.33%;
+  }
+  .col-md-2 {
+    float: left;
+    width: 16.67%;
+  }
+  .col-md-3 {
+    float: left;
+    width: 25%;
+  }
+  .col-md-4 {
+    float: left;
+    width: 33.33%;
+  }
+  .col-md-5 {
+    float: left;
+    width: 41.67%;
+  }
+  .col-md-6 {
+    float: left;
+    width: 50%;
+  }
+  .col-md-7 {
+    float: left;
+    width: 58.33%;
+  }
+  .col-md-8 {
+    float: left;
+    width: 66.67%;
+  }
+  .col-md-9 {
+    float: left;
+    width: 75%;
+  }
+  .col-md-10 {
+    float: left;
+    width: 83.33%;
+  }
+  .col-md-11 {
+    float: left;
+    width: 91.67%;
+  }
+  .col-md-12 {
+    float: left;
+    width: 100%;
+  }
+}
 /********** desktop **********/
 @media (min-width: 992px) {
   .col-lg-1 {
@@ -107,57 +158,6 @@ h1 {
     width: 91.67%;
   }
   .col-lg-12 {
-    float: left;
-    width: 100%;
-  }
-}
-/********** tablet **********/
-@media (min-width: 768px) and (max-width: 991px) {
-  .col-md-1 {
-    float: left;
-    width: 8.33%;
-  }
-  .col-md-2 {
-    float: left;
-    width: 16.67%;
-  }
-  .col-md-3 {
-    float: left;
-    width: 25%;
-  }
-  .col-md-4 {
-    float: left;
-    width: 33.33%;
-  }
-  .col-md-5 {
-    float: left;
-    width: 41.67%;
-  }
-  .col-md-6 {
-    float: left;
-    width: 50%;
-  }
-  .col-md-7 {
-    float: left;
-    width: 58.33%;
-  }
-  .col-md-8 {
-    float: left;
-    width: 66.67%;
-  }
-  .col-md-9 {
-    float: left;
-    width: 75%;
-  }
-  .col-md-10 {
-    float: left;
-    width: 83.33%;
-  }
-  .col-md-11 {
-    float: left;
-    width: 91.67%;
-  }
-  .col-md-12 {
     float: left;
     width: 100%;
   }
