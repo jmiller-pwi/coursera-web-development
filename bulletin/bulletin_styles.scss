@@ -76,26 +76,33 @@ h4 {
   }
 }
 
-.leader-list li {
-  display: flex;
-  width: 100%;
+.leader-list {
+  list-style: none;
+  text-align: left;
+  overflow-x: hidden;
+
+  li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content:
+    ".............................."
+    ".............................."
+    ".............................."
+    ".............................."
+    ".............................."
+    ".............................."
+    "..............................";
+  }
 
   .title {
-    order: 1;
+    background: white;
+    padding-right: 0.3em;
   }
 
   .name {
-    order: 3;
-  }
-
-  &::after {
-    background-image: radial-gradient(circle, currentcolor 1px, transparent 1.5px);
-    background-position: bottom;
-    background-size: 1ex 4.5px;
-    background-repeat: space no-repeat;
-    content: "";
-    flex-grow: 1;
-    height: 1em;
-    order: 2;
+    padding-left: 0.3em;
+    background: white;
+    float: right;
   }
 }
