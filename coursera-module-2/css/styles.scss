@@ -4,7 +4,6 @@ $tablet-name: "md";
 $tablet-min-width: 768px;
 $num-columns: 12;
 
-
 $color-background: #d5d5d5;
 $color-item: #D5D5D5;
 $color-accent-1: #B14206;
@@ -22,7 +21,7 @@ $standard-border: $border-width solid $color-black;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   color: $color-black;
-  margin:0;
+  margin: 0;
 }
 
 .content-header {
@@ -33,7 +32,6 @@ h1 {
   margin: 1em;
   font-family: Garamond serif;
 }
-
 
 
 .item {
@@ -62,10 +60,9 @@ h1 {
   width: 130px;
   float: right;
   text-align: center;
-  position: relative;
   font-weight: bold;
-  top: -$border-width;
-  right: -$border-width;
+  margin-top: -$border-width;
+  margin-right: -$border-width;
   margin-bottom: 1em;
 }
 
