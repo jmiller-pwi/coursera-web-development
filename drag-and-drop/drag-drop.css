@@ -1,0 +1,21 @@
+#page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#blue-box {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: grab;
+}
+
+.dragged {
+  cursor: grabbing;
+}
+
+/*# sourceMappingURL=drag-drop.css.map */
