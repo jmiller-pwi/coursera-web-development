@@ -1,12 +1,81 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="drag-drop.css">
+    <style>
+        #blue-box {
+            background-color: blue;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
 </head>
 <body>
-<div id="page">
-    <div id="blue-box" class="draggable"></div>
-</div>
-<script src="drag-drop.js"></script>
+<div id="blue-box"></div>
+<script>
+    const blueBox = document.querySelector("#blue-box");
+    let isDragging = false;
+    let currentX;
+    let currentY;
+    let initialX;
+    let initialY;
+    let xOffset = 0;
+    let yOffset = 0;
+
+    blueBox.addEventListener("mousedown", function(e) {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+        isDragging = true;
+    });
+
+    blueBox.addEventListener("mouseup", function(e) {
+        isDragging = false;
+        const copiedBox = blueBox.cloneNode(true);
+        copiedBox.style.left = currentX + "px";
+        copiedBox.style.top = currentY + "px";
+        copiedBox.addEventListener("mousedown", dragStart);
+        copiedBox.addEventListener("mouseup", dragEnd);
+        copiedBox.addEventListener("mouseout", dragEnd);
+        copiedBox.addEventListener("mousemove", drag);
+        document.body.appendChild(copiedBox);
+
+        // create another blue box in the corner if it doesn't exist
+        const topLeftBox = document.querySelector("#blue-box[style='left: 0px; top: 0px;']");
+        if (!topLeftBox) {
+            const newBox = blueBox.cloneNode(true);
+            document.body.appendChild(newBox);
+        }
+    });
+
+    blueBox.addEventListener("mouseout", function(e) {
+        isDragging = false;
+    });
+
+    blueBox.addEventListener("mousemove", function(e) {
+        if (isDragging) {
+            e.preventDefault();
+            currentX = e.clientX - initialX;
+            currentY = e.clientY - initialY;
+
+            xOffset = currentX;
+            yOffset = currentY;
+
+            e.target.style.left = currentX + "px";
+            e.target.style.top = currentY + "px";
+        }
+    });
+
+    function dragStart(e) {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+
+        isDragging = true;
+    }
+
+    function dragEnd(e) {
+        isDragging = false;
+    }
+</script>
 </body>
 </html>
