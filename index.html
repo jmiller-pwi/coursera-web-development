@@ -5,6 +5,21 @@
     <title>PWI Jeff's very own Github page!</title>
     <link rel="stylesheet" href="index.css">
 
+
+    <script>  (function(g, u, i, d, e, s) {
+      g[e] = g[e] || [];
+      var f = u.getElementsByTagName(i)[0];
+      var k = u.createElement(i);
+      k.async = true;
+      k.src = 'https://static.userguiding.com/media/user-guiding-' + s + '-embedded.js';
+      f.parentNode.insertBefore(k, f);
+      if (g[d]) return;
+      var ug = g[d] = {q: []};
+      ug.c = function(n) {return function() {ug.q.push([n, arguments]);};};
+      var m = ['previewGuide', 'finishPreview', 'track', 'identify', 'hideChecklist', 'launchChecklist'];
+      for (var j = 0; j < m.length; j += 1) {ug[m[j]] = ug.c(m[j]);}
+    })(window, document, 'script', 'userGuiding', 'userGuidingLayer', '434767253ID');</script>
+
     <script>
       function showPopup() {
         // Get the current date
@@ -12,11 +27,11 @@
         var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
 
         // Check the cookie
-        var lastPopupDate = document.cookie.replace(/(?:(?:^|.*;\s*)lastPopupDate\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        var lastPopupDate = document.cookie.replace(/(?:(?:^|.*;\s*)lastPopupDate\s*\=\s*([^;]*).*$)|^.*$/, '$1');
         if (lastPopupDate === today) return;  // Popup has already been shown today, don't show it again
 
         // If not, show the popup and update the cookie
-        document.cookie = "lastPopupDate=" + today + "; expires=23:59:59 GMT; path=/";
+        document.cookie = 'lastPopupDate=' + today + '; expires=23:59:59 GMT; path=/';
 
         // Create the overlay div
         var overlay = document.createElement('div');
@@ -41,7 +56,7 @@
 
         // Create the warning text
         var warningText = document.createElement('p');
-        warningText.textContent = 'Warning: The data on this page is sensitive and should not be shared.';
+        warningText.textContent = 'Warning: The data on this page is sensitive and should not be shared. Just kidding! Welcome to my site!';
         warningText.style.fontSize = '14pt';
         warningText.style.marginBottom = '20px';
 
@@ -59,7 +74,7 @@
         okButton.onclick = function() {
           // Remove the overlay from the body when OK is clicked
           document.body.removeChild(overlay);
-        }
+        };
 
         // Append everything
         popup.appendChild(warningText);
