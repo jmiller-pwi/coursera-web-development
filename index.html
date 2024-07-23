@@ -5,21 +5,6 @@
     <title>PWI Jeff's very own Github page!</title>
     <link rel="stylesheet" href="index.css">
 
-
-    <script>  (function(g, u, i, d, e, s) {
-      g[e] = g[e] || [];
-      var f = u.getElementsByTagName(i)[0];
-      var k = u.createElement(i);
-      k.async = true;
-      k.src = 'https://static.userguiding.com/media/user-guiding-' + s + '-embedded.js';
-      f.parentNode.insertBefore(k, f);
-      if (g[d]) return;
-      var ug = g[d] = {q: []};
-      ug.c = function(n) {return function() {ug.q.push([n, arguments]);};};
-      var m = ['previewGuide', 'finishPreview', 'track', 'identify', 'hideChecklist', 'launchChecklist'];
-      for (var j = 0; j < m.length; j += 1) {ug[m[j]] = ug.c(m[j]);}
-    })(window, document, 'script', 'userGuiding', 'userGuidingLayer', '434767253ID');</script>
-
     <script>
       function showPopup() {
         // Get the current date
@@ -86,6 +71,22 @@
       // Call the function when the page loads
       window.onload = showPopup;
     </script>
+
+    <script>
+      (function(g, u, i, d, e, s) {
+        g[e] = g[e] || [];
+        var f = u.getElementsByTagName(i)[0];
+        var k = u.createElement(i);
+        k.async = true;
+        k.src = 'https://static.userguiding.com/media/user-guiding-' + s + '-embedded.js';
+        f.parentNode.insertBefore(k, f);
+        if (g[d]) return;
+        var ug = g[d] = {q: []};
+        ug.c = function(n) {return function() {ug.q.push([n, arguments]);};};
+        var m = ['previewGuide', 'finishPreview', 'track', 'identify', 'hideChecklist', 'launchChecklist'];
+        for (var j = 0; j < m.length; j += 1) {ug[m[j]] = ug.c(m[j]);}
+      })(window, document, 'script', 'userGuiding', 'userGuidingLayer', '434767253ID');
+    </script>
 </head>
 <body>
 <div class="container">
@@ -93,11 +94,8 @@
         <hr class="divider">
     </div>
     <main class="content">
-        <p>My name is Jeff. I'm learning HTML and CSS so that I can generate documents using <a
-                href="https://restpack.io/"
-                target="_blank">Restpack</a>.
-        </p>
-        <p>Here is a list of documents I am working on:</p>
+        <p>My name is Jeff. I'm learning HTML, CSS, and JavaScript so that I can build my own web pages!</p>
+        <p>Here are some pages I've created for automatically generating PDF documents:</p>
         <div class="item"><a href="shipments/zoro_shipment.html">Zoro Shipment Ticket</a></div>
         <div class="item"><a href="shipments/pwi_shipment.html">Shipment Ticket</a></div>
         <p>I'm also working on some web pages to practice the skills I learn in class:</p>
