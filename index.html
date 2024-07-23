@@ -6,73 +6,6 @@
     <link rel="stylesheet" href="index.css">
 
     <script>
-      function showPopup() {
-        // Get the current date
-        var date = new Date();
-        var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-
-        // Check the cookie
-        var lastPopupDate = document.cookie.replace(/(?:(?:^|.*;\s*)lastPopupDate\s*\=\s*([^;]*).*$)|^.*$/, '$1');
-        if (lastPopupDate === today) return;  // Popup has already been shown today, don't show it again
-
-        // If not, show the popup and update the cookie
-        document.cookie = 'lastPopupDate=' + today + '; expires=23:59:59 GMT; path=/';
-
-        // Create the overlay div
-        var overlay = document.createElement('div');
-        overlay.style.position = 'fixed';
-        overlay.style.top = 0;
-        overlay.style.left = 0;
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.backgroundColor = 'rgba(0,0,0,0.6)';
-        overlay.style.display = 'flex';
-        overlay.style.justifyContent = 'center';
-        overlay.style.alignItems = 'center';
-        overlay.style.zIndex = 10000;
-
-        // Create the popup div
-        var popup = document.createElement('div');
-        popup.style.backgroundColor = 'white';
-        popup.style.padding = '20px';
-        popup.style.borderRadius = '10px';
-        popup.style.maxWidth = '80%';
-        popup.style.textAlign = 'center';
-
-        // Create the warning text
-        var warningText = document.createElement('p');
-        warningText.textContent = 'Warning: The data on this page is sensitive and should not be shared. Just kidding! Welcome to my site!';
-        warningText.style.fontSize = '14pt';
-        warningText.style.marginBottom = '20px';
-
-        // Create the OK button
-        var okButton = document.createElement('button');
-        okButton.textContent = 'OK';
-        okButton.style.background = 'blue';
-        okButton.style.color = 'white';
-        okButton.style.border = 'none';
-        okButton.style.padding = '10px 20px';
-        okButton.style.cursor = 'pointer';
-        okButton.style.fontSize = '14pt';
-        okButton.style.fontWeight = 'bold';
-        okButton.style.borderRadius = '5px';
-        okButton.onclick = function() {
-          // Remove the overlay from the body when OK is clicked
-          document.body.removeChild(overlay);
-        };
-
-        // Append everything
-        popup.appendChild(warningText);
-        popup.appendChild(okButton);
-        overlay.appendChild(popup);
-        document.body.appendChild(overlay);
-      }
-
-      // Call the function when the page loads
-      window.onload = showPopup;
-    </script>
-
-    <script>
       (function(g, u, i, d, e, s) {
         g[e] = g[e] || [];
         var f = u.getElementsByTagName(i)[0];
@@ -87,6 +20,7 @@
         for (var j = 0; j < m.length; j += 1) {ug[m[j]] = ug.c(m[j]);}
       })(window, document, 'script', 'userGuiding', 'userGuidingLayer', '434767253ID');
     </script>
+
 </head>
 <body>
 <div class="container">
