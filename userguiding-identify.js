@@ -1,6 +1,6 @@
 console.info("Identifying user to UserGuiding...");
 
-window.userGuiding.identify('1Ax69i57j0j69i60l4', {
+window.userGuiding.identify('anonymous@github-user.com', {
   email: 'anonymous@github-user.com',
   name: 'Awesome User',
 })
